@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nora de Parfum | Luxury Fragrances</title>
+    <style>
+        :root {
+            --royal-purple: #4B0082;
+            --gold: #D4AF37;
+            --cream: #FFFDD0;
+            --deep-purple: #301934;
+            --light-gold: #F5F5DC;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Garamond', serif;
+        }
+        
+        body {
+            color: var(--deep-purple);
+            background: url('/api/placeholder/1200/800') center/cover fixed;
+        }
+        
+        header {
+            background: linear-gradient(rgba(75, 0, 130, 0.9), rgba(75, 0, 130, 0.9)), url('images/pexels-eye4dtail-136651.jpg') center/cover no-repeat;
+            color: var(--gold);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/pexels-ron-lach-10536613.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+        
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--deep-purple);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .features {
+            padding: 4rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            background: linear-gradient(rgba(255, 253, 208, 0.8), rgba(255, 253, 208, 0.8)), url('images/pexels-vitalyagorbachev-26924218.jpg') center/cover fixed;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .feature h3 {
+            color: var(--royal-purple);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature p {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .about {
+            background: linear-gradient(rgba(48, 25, 52, 0.9), rgba(48, 25, 52, 0.9)), url('images/pexels-harsh-limbachiya-106102925-11577068.jpg') center/cover no-repeat;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .about h2 {
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .whatsapp-section {
+            background: linear-gradient(rgba(245, 245, 220, 0.85), rgba(245, 245, 220, 0.85)), url('images/pexels-zeynep-ladin-ustundag-233481659-29614394.jpg') center/cover no-repeat;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .whatsapp-section h2 {
+            color: var(--royal-purple);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .whatsapp-section p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: linear-gradient(rgba(75, 0, 130, 0.95), rgba(75, 0, 130, 0.95)), url('images/pexels-eye4dtail-136651.jpg') center/cover no-repeat;
+            color: var(--light-gold);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            color: var(--gold);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NORA DE PARFUM</div>
+        <div class="tagline">Where Scent Meets Royalty</div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Signature Scent</h2>
+            <p>Indulge in our exclusive collection of handcrafted luxury perfumes, sourced from the world's finest ingredients and created by master perfumers.</p>
+            <a href="https://wa.me/12345678901" class="cta-button">CHAT WITH A PERFUME EXPERT</a>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="feature">
+            <div class="feature-icon">♛</div>
+            <h3>Curated Collection</h3>
+            <p>Our boutique features a carefully selected range of exclusive perfumes from renowned houses and hidden gems from around the world.</p>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">✧</div>
+            <h3>Personalized Service</h3>
+            <p>Our fragrance experts provide personalized consultations to help you find the perfect scent that complements your personality and style.</p>
+        </div>
+        
+        <div class="feature">
+            <div class="feature-icon">✦</div>
+            <h3>Luxury Experience</h3>
+            <p>From exquisite packaging to white-glove delivery, we ensure a premium experience worthy of the treasures within.</p>
+        </div>
+    </section>
+    
+    <section class="about">
+        <h2>Our Heritage</h2>
+        <p>For over two decades, Nora de Parfum has been a sanctuary for fragrance connoisseurs. Our boutique houses rare and exclusive scents that tell stories of distant lands, ancient traditions, and modern innovation. We believe that the right perfume is not merely worn—it becomes an extension of one's identity, an invisible accessory that leaves an unforgettable impression.</p>
+    </section>
+    
+    <section class="whatsapp-section">
+        <h2>Personalized Fragrance Consultation</h2>
+        <p>Our perfume experts are ready to guide you through our exclusive collection and help you discover the perfect scent for any occasion. Connect with us instantly for personalized recommendations, availability inquiries, or to schedule a private in-store consultation.</p>
+        <a href="https://wa.me/12345678901" class="cta-button">CHAT WITH US ON WHATSAPP</a>
+    </section>
+    
+    <footer>
+        <p>© 2025 Nora de Parfum. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" class="social-icon">❦</a>
+            <a href="#" class="social-icon">❧</a>
+            <a href="#" class="social-icon">✾</a>
+        </div>
+    </footer>
+</body>
+</html>
